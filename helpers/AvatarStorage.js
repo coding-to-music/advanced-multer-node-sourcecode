@@ -1,4 +1,5 @@
 // Load dependencies
+// var foobar = require('Request');
 var _ = require('lodash');
 var fs = require('fs');
 var path = require('path');
@@ -7,8 +8,36 @@ var crypto = require('crypto');
 var mkdirp = require('mkdirp');
 var concat = require('concat-stream');
 var streamifier = require('streamifier');
+var apikey = process.env.CF_API_KEY 
 
-// Configure UPLOAD_PATH
+// console.log(process.env.CF_API_KEY)
+
+
+// const url = 'https://reqres.in/api/users';
+
+// // post body data 
+// const user = {
+//     first_name: 'John',
+//     last_name: 'Doe',
+//     job_title: 'Blogger'
+// };
+
+// // create request object
+// const request = new Request(url, {
+//     method: 'POST',
+//     body: JSON.stringify(user),
+//     headers: new Headers({
+//         'Content-Type': 'application/json'
+//     })
+// });
+
+// // pass request object to `fetch()`
+// fetch(request)
+//     .then(res => res.json())
+//     .then(res => console.log(res));
+
+
+// Configure _PATH
 // process.env.AVATAR_STORAGE contains uploads/avatars
 var UPLOAD_PATH = path.resolve(__dirname, '..', process.env.AVATAR_STORAGE);
 

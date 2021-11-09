@@ -6,6 +6,7 @@ var _ = require('lodash');
 var path = require('path');
 var multer = require('multer');
 var AvatarStorage = require('../helpers/AvatarStorage');
+var CloudStorage = require('../helpers/CloudStorage');
 
 // setup a new instance of the AvatarStorage engine 
 var storage = AvatarStorage({
