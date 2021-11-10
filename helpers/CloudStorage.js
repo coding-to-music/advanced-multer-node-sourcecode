@@ -1,3 +1,6 @@
+// import axios from 'axios';
+
+
 // Simple PUT request with a JSON body using axios
 // const element = document.querySelector('#put-request .date-updated');
 // const article = { title: 'Axios PUT Request Example' };

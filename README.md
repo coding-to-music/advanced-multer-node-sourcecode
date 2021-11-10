@@ -24,10 +24,10 @@ AVATAR_STORAGE=public/uploads/avatars
 
 ```
 
-- The app will run on port **3000** by default. If you would prefer another port, you can specify it in the `bin/www` file. Look for the following line in the file and replace `'3000'` with your desired port.
+- The app will run on port **3100** by default. If you would prefer another port, you can specify it in the `bin/www` file. Look for the following line in the file and replace `'3100'` with your desired port.
 
 ```js
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '3100');
 ```
 
 - Finally, start the demo app by running the following command:

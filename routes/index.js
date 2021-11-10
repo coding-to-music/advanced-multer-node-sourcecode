@@ -1,5 +1,8 @@
+var axios = require('axios');
 var express = require('express');
 var router = express.Router();
+	
+// import axios from 'axios';
 
 // import multer and the AvatarStorage engine
 var _ = require('lodash');
@@ -67,6 +70,14 @@ router.post('/upload', upload.single(process.env.AVATAR_FIELD), function(req, re
 
 		return (req.file.storage == 'local' ? base : '') + '/' + url;
 	});
+
+	// import axios from 'axios';
+
+	// Simple PUT request with a JSON body using axios
+	// const element = document.querySelector('#put-request .date-updated');
+	const article = { title: 'Axios PUT Request Example' };
+	axios.put('https://reqres.in/api/articles/1', article)
+		.then(port);
 
 	res.json({
 		images: files
