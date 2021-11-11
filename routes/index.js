@@ -71,7 +71,7 @@ router.post('/upload', upload.single(process.env.AVATAR_FIELD), function(req, re
 		return (req.file.storage == 'local' ? base : '') + '/' + url;
 	});
 
-	console.log('About to make a PUT request' + files[0]); 
+	console.log('Before PUT request: ' + files[0]); 
 
 	// import axios from 'axios';
 
@@ -81,12 +81,16 @@ router.post('/upload', upload.single(process.env.AVATAR_FIELD), function(req, re
 	axios.put('https://reqres.in/api/articles/1', article)
 		.then(files[0]);
 
-	res.json({
-		images: files
-	});
+	// res.json({
+	// 	"images-loaded": files
+	// });
 
-	console.log('Completed PUT request' + files[0]); 
-
+	console.log('After  PUT request: ' + files[0]); 
+	console.log();
+	console.log();
+	console.log(JSON.stringify(files, undefined, 4)); 
+	console.log();
+	console.log();
 });
 
 module.exports = router;
